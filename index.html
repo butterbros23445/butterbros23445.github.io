@@ -4,8 +4,9 @@
 </head>
 <body style='margin-left: 30px;'>
 
-    <h1>CIT7 Students v1.2.2</h1>
-    <p>CIT7 students: Exam Scores</p>
+    <h1>=Students v1.2.3</h1>
+    <p>=students: Exam Scores</p>
+	<p>=Sort by Major</p>
         
     <input type="button" id='btn' value="Get Student Scores">
 	<input type="button" id='btn2' value="Get Student Scores2">
@@ -31,7 +32,7 @@
                     tableContents += `<tr><td> ${dataCIT[i].name} </td>
 						<td> ${dataCIT[i].major}
 						<td> ${dataCIT[i].midterm} </td>
-						<td> ${dataCIT[i].final} </td></tr>`;  // generate table using template literals
+						<td> ${dataCIT[i].final} </td></tr>`; 
                 }
 					
                 tableContents += "</table>";
