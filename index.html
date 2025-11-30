@@ -20,7 +20,7 @@
 			console.log(response)
 			if(response.ok) {
 				var data = await response.json();
-				var responsefiltered = data.filter( (response) => response.major = CIT );
+				var responsefiltered = data.filter( (response) => response.major == CIT );
 				var data = responsefiltered
 
 				var tableContents = "<table cellspacing='5'>"
