@@ -4,7 +4,7 @@
 </head>
 <body style='margin-left: 30px;'>
 
-    <h1>CIT7 Students v1.1.1</h1>
+    <h1>CIT7 Students v1.1.2</h1>
     <p>CIT7 students: Exam Scores</p>
         
     <input type="button" id='btn' value="Get Student Scores">
@@ -20,7 +20,7 @@
 			console.log(response)
 			if(response.ok) {
 				var data = await response.json();
-				var responsefiltered = students5.filter( (response) => students5.major = CIT );
+				var responsefiltered = students5.filter( (response) => response.major = CIT );
 				var data = responsefiltered
 
 				var tableContents = "<table cellspacing='5'>"
