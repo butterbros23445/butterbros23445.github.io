@@ -4,7 +4,7 @@
 </head>
 <body style='margin-left: 30px;'>
 
-    <h1>CIT7 Students v1.2.1</h1>
+    <h1>CIT7 Students v1.2.2</h1>
     <p>CIT7 students: Exam Scores</p>
         
     <input type="button" id='btn' value="Get Student Scores">
@@ -27,11 +27,11 @@
 				var tableContents = "<table cellspacing='5'>"
 				tableContents += "<tr><td>Name</td><td>Major</td><td>Midterm</td><td>Final</td></tr>";
 					
-            	for(i = 0; i < data.length; i++) {
-                    tableContents += `<tr><td> ${data[i].name} </td>
-						<td> ${data[i].major}
-						<td> ${data[i].midterm} </td>
-						<td> ${data[i].final} </td></tr>`;  // generate table using template literals
+            	for(i = 0; i < dataCIT.length; i++) {
+                    tableContents += `<tr><td> ${dataCIT[i].name} </td>
+						<td> ${dataCIT[i].major}
+						<td> ${dataCIT[i].midterm} </td>
+						<td> ${dataCIT[i].final} </td></tr>`;  // generate table using template literals
                 }
 					
                 tableContents += "</table>";
@@ -49,17 +49,17 @@
 			if(response.ok) {
 				var data = await response.json();
 				console.log(data)
-				var dataCIT =  data.filter( (data2) => data2.major === 'BUS' );
-				console.log(dataCIT)
+				var dataBUS =  data.filter( (data2) => data2.major === 'BUS' );
+				console.log(dataBUS)
 
 				var tableContents = "<table cellspacing='5'>"
 				tableContents += "<tr><td>Name</td><td>Major</td><td>Midterm</td><td>Final</td></tr>";
 					
-            	for(i = 0; i < data.length; i++) {
-                    tableContents += `<tr><td> ${data[i].name} </td>
-						<td> ${data[i].major}
-						<td> ${data[i].midterm} </td>
-						<td> ${data[i].final} </td></tr>`;  // generate table using template literals
+            	for(i = 0; i < dataBUS.length; i++) {
+                    tableContents += `<tr><td> ${dataBUS[i].name} </td>
+						<td> ${dataBUS[i].major}
+						<td> ${dataBUS[i].midterm} </td>
+						<td> ${dataBUS[i].final} </td></tr>`;  // generate table using template literals
                 }
 					
                 tableContents += "</table>";
