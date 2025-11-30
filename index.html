@@ -4,7 +4,7 @@
 </head>
 <body style='margin-left: 30px;'>
 
-    <h1>CIT7 Students v1.0.13</h1>
+    <h1>CIT7 Students v1.1.0</h1>
     <p>CIT7 students: Exam Scores</p>
         
     <input type="button" id='btn' value="Get Student Scores">
@@ -16,7 +16,8 @@
     document.addEventListener('DOMContentLoaded', function() {
 													  
     	document.querySelector('#btn').onclick = async function(){   
-			var response = await fetch('cit5students.json');       
+			var students5 = await fetch('cit5students.json');
+			var response = students5.filter( (student) => students5.major = CIT );
 			if(response.ok) {
 				var data = await response.json();
 
