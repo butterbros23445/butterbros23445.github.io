@@ -4,14 +4,14 @@
 </head>
 <body style='margin-left: 30px;'>
 
-    <h1>CIT7 Students v1.0.10</h1>
+    <h1>CIT7 Students v1.0.11</h1>
     <p>CIT7 students: Exam Scores</p>
         
     <input type="button" id='btn' value="Get Student Scores">
-	<input type="button" id='btnsecond' value="Get Student Scores 2">
+	<input type="button" id='btn2' value="Get Student Scores 2">
 	
     <div id="result"></div>
-	<div id="resultsecond"></div>
+	<div id="result2"></div>
 
 		<script>
 		   
@@ -32,26 +32,8 @@
 								<td> ${data[i].midterm} </td>
 								<td> ${data[i].final} </td></tr>`;  // generate table using template literals
 		                }
-							
-		                tableContents += "</table>";
-		
-		                document.querySelector('#result').innerHTML = tableContents;
-					}
-					else {
-						document.querySelector('#result').innerHTML = "Data not found";
-					}	
-		    	};
-			
-		  	});
-		   
-		</script>
 
-	
-		<script>
-		   
-		    document.addEventListener('DOMContentLoaded', function() {      // when page has loaded, more or less
-															  
-		    	document.querySelector('btnsecond').onclick = async function(){   
+					document.querySelector('#btn2').onclick = async function(){   
 					var response = await fetch('cit5students.json');       // ajax GET request
 		        	//console.log(response);
 					if(response.ok) {
@@ -69,16 +51,19 @@
 							
 		                tableContents += "</table>";
 		
-		                document.querySelector('#resultsecond').innerHTML = tableContents;
+		                document.querySelector('#result').innerHTML = tableContents;
+						document.querySelector('#result2').innerHTML = tableContents;
 					}
 					else {
-						document.querySelector('#resultsecond').innerHTML = "Data not found";
+						document.querySelector('#result').innerHTML = "Data not found";
+						document.querySelector('#result2').innerHTML = tableContents;
 					}	
 		    	};
 			
 		  	});
 		   
 		</script>
+
    
 </body>
 </html>
