@@ -4,14 +4,13 @@
 </head>
 <body style='margin-left: 30px;'>
 
-    <h1>CIT7 Students v1.2.0</h1>
+    <h1>CIT7 Students v1.2.1</h1>
     <p>CIT7 students: Exam Scores</p>
         
     <input type="button" id='btn' value="Get Student Scores">
 	<input type="button" id='btn2' value="Get Student Scores2">
              
  	<div id="result"></div>
-	<div id="result2"></div>
     
 <script>
    
@@ -65,10 +64,10 @@
 					
                 tableContents += "</table>";
 				
-                document.querySelector('#result2').innerHTML = tableContents;
+                document.querySelector('#result').innerHTML = tableContents;
 			}
 			else {
-				document.querySelector('#result2').innerHTML = "Data not found";
+				document.querySelector('#result').innerHTML = "Data not found";
 			}	
     	};
 	
