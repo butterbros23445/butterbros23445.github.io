@@ -4,14 +4,14 @@
 </head>
 <body style='margin-left: 30px;'>
 
-    <h1>CIT7 Students v1.0.9</h1>
+    <h1>CIT7 Students v1.0.10</h1>
     <p>CIT7 students: Exam Scores</p>
         
     <input type="button" id='btn' value="Get Student Scores">
-	<input type="button" id='btn2' value="Get Student Scores 2">
+	<input type="button" id='btnsecond' value="Get Student Scores 2">
 	
     <div id="result"></div>
-	<div id="result2"></div>
+	<div id="resultsecond"></div>
 
 		<script>
 		   
@@ -51,8 +51,8 @@
 		   
 		    document.addEventListener('DOMContentLoaded', function() {      // when page has loaded, more or less
 															  
-		    	document.querySelector('btn2').onclick = async function(){   
-					var response = await fetch('cit5students2.json');       // ajax GET request
+		    	document.querySelector('btnsecond').onclick = async function(){   
+					var response = await fetch('cit5students.json');       // ajax GET request
 		        	//console.log(response);
 					if(response.ok) {
 						var data = await response.json();                // array of objects
@@ -69,10 +69,10 @@
 							
 		                tableContents += "</table>";
 		
-		                document.querySelector('#result2').innerHTML = tableContents;
+		                document.querySelector('#resultsecond').innerHTML = tableContents;
 					}
 					else {
-						document.querySelector('#result2').innerHTML = "Data not found";
+						document.querySelector('#resultsecond').innerHTML = "Data not found";
 					}	
 		    	};
 			
