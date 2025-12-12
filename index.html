@@ -61,9 +61,7 @@
             methods: {    // ajax request
                 async getData() {
                     const response = await fetch('tickets1.json')
-					console.log(response)
                     this.tickets = await response.json()
-					console.log(tickets)
                 },
             }
           })
